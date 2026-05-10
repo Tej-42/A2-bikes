@@ -81,7 +81,7 @@ function router() {
     } else if (path === "/favorites") {
         showPage("favorites");
     } else if (path === "/document") {
-        showPage("document);
+        showPage("document");
     } else if (path === "/contact") {
         showPage("contact");
     } else if (path === "/filter-all") {
