@@ -78,6 +78,8 @@ function router() {
         showPage("home");
     } else if (path === "/favorites") {
         showPage("favorites");
+    } else if (path === "/document") {
+        showPage("document);
     } else if (path === "/contact") {
         showPage("contact");
     } else if (path === "/filter-all") {
@@ -545,8 +547,21 @@ function showPage(page) {
         `;
     }
 
-    else if (page === "contact") {
+    else if (page === "document") {
         navLinks[2].classList.add("active");
+
+        fetch("prehovor-do-duse.html")
+            .then(response => response.text())
+            .then(html => {
+                content.innerHTML = html;
+            })
+            .catch(() => {
+                content.innerHTML = "<p>Document could not be loaded.</p>";
+            });
+    }
+
+    else if (page === "contact") {
+        navLinks[3].classList.add("active");
 
         content.innerHTML = `
             <div class="contacts">
