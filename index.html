@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2 Motorbikes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="main-header">
+        <video autoplay muted loop id="headerVideo">
+            <source src="Isle-of-man-TT-shortened.mp4" type="video/mp4">
+        </video>
+
+        <div class="header-overlay">
+            <h1>A2 BIKES WEBSITE</h1>
+
+            <nav class="navbar">
+                <a href="/" onclick="event.preventDefault(); navigate('/')">Home</a>
+
+                <a href="/favorites" onclick="event.preventDefault(); navigate('/favorites')">
+                    Favorites <span id="favorites-count">(0)</span>
+                </a>
+
+                <a href="/contact" onclick="event.preventDefault(); navigate('/contact')">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="content"></main>
+
+    <footer>
+        &copy; 2025 A2 Motorbikes — All rights reserved.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
