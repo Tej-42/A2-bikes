@@ -1,6 +1,6 @@
-const BASE = location.hostname === "localhost"
+const BASE = location.hostname === "localhost" || location.hostname === "127.0.0.1"
     ? ""
-    : "/a2-bikes";
+    : "/A2-bikes";
 
 const bikes = [
     { name: "Honda CBR 250 R", type: "SPORT", cubature: 249, cubature_round: 250, power: 19, cylinders: 1, manufacturer: "Honda", price: { min: 1750, max: 2500 }, years: { min: 2011, max: 2020 }, img_filter: "images/honda cbr 250 r.jpg", bazos_url: "https://motocykle.bazos.sk/cestne/?hledat=honda+cbr+250r", color: "#cc0000" },
@@ -552,7 +552,7 @@ function showPage(page) {
     else if (page === "document") {
         navLinks[2].classList.add("active");
 
-        fetch("prehovor-do-duse.html")
+        fetch(BASE + "/prehovor-do-duse.html")
             .then(response => response.text())
             .then(html => {
                 content.innerHTML = html;
