@@ -1,4 +1,6 @@
-const BASE = "/A2-bikes";
+const BASE = location.hostname === "localhost"
+    ? ""
+    : "/a2-bikes";
 
 const bikes = [
     { name: "Honda CBR 250 R", type: "SPORT", cubature: 249, cubature_round: 250, power: 19, cylinders: 1, manufacturer: "Honda", price: { min: 1750, max: 2500 }, years: { min: 2011, max: 2020 }, img_filter: "images/honda cbr 250 r.jpg", bazos_url: "https://motocykle.bazos.sk/cestne/?hledat=honda+cbr+250r", color: "#cc0000" },
@@ -72,7 +74,7 @@ function navigate(path) {
 }
 
 function router() {
-    let path = window.location.pathname.replace(BASE, "");
+    let path = window.location.pathname.replace(BASE, "") || "/";
 
     if (path === "" || path === "/") {
         showPage("home");
