@@ -340,3 +340,58 @@ footer {
 .document h2 {
     margin-top: 0;
 }
+
+
+@media (max-width: 480px) {
+
+    .bikes-grid {
+        grid-template-columns: 1fr;
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .bike-box img {
+        height: 200px;
+    }
+
+    .bike-box h3 {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    .header-overlay h1 {
+        font-size: 32px;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .navbar {
+        top: 10px;
+        right: 10px;
+        flex-direction: row;
+        gap: 8px;
+        padding: 6px 10px;
+    }
+
+    .navbar a {
+        font-size: 13px;
+    }
+
+    .filters-selector {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .bike-detail {
+        margin: 10px;
+        padding: 12px;
+    }
+
+    .buy-button {
+        width: 100%;
+        max-width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+}
