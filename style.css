@@ -84,6 +84,10 @@ footer {
     text-decoration: underline;
 }
 
+.document-link {
+    color: red;
+}
+
 /* HOME */
 
 .introduction {
