@@ -60,7 +60,7 @@ const bikes = [
 ];
 
 
-let currentPage = "home";
+let currentPage = "document";
 
 function slugify(text) {
     return text
