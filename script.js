@@ -60,7 +60,7 @@ const bikes = [
 ];
 
 
-let currentPage = "document";
+let currentPage = "home";
 
 function slugify(text) {
     return text
@@ -172,7 +172,7 @@ function showPage(page) {
     navLinks.forEach(link => link.classList.remove("active"));
 
     if (page === "home") {
-        navLinks[1].classList.add("active");
+        navLinks[0].classList.add("active");
 
         content.innerHTML = `
             <div class="introduction">
@@ -530,7 +530,7 @@ function showPage(page) {
     }
 
     else if (page === "favorites") {
-        navLinks[2].classList.add("active");
+        navLinks[1].classList.add("active");
 
         const favoriteNames = JSON.parse(localStorage.getItem("favoriteBikes")) || [];
         const favoriteBikes = bikes.filter(bike => favoriteNames.includes(bike.name));
@@ -551,7 +551,7 @@ function showPage(page) {
     }
 
     else if (page === "document") {
-        navLinks[0].classList.add("active");
+        navLinks[2].classList.add("active");
 
         fetch(BASE + "/prehovor-do-duse.html")
             .then(response => response.text())
