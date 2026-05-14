@@ -71,11 +71,20 @@ function slugify(text) {
 
 function navigate(path) {
     history.pushState(null, "", BASE + path);
+
+    gtag('event', 'page_view', {
+        page_path: path
+    });
+    
     router();
 }
 
 function router() {
     let path = window.location.pathname.replace(BASE, "") || "/";
+
+    gtag('event', 'page_view', {
+        page_path: path
+    });
 
     if (path === "" || path === "/") {
         showPage("home");
